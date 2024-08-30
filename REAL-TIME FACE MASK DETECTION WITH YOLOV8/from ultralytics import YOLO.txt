@@ -1,0 +1,8 @@
+from ultralytics import YOLO
+from PIL import Image
+
+# modeli yükle
+model = YOLO('best2.pt')  # load a pretrained model
+
+# modeli kullanarak video ve webcam görüntüsü ile nesne tahmini yap
+sonuc = model.predict(source="0",show=True)     # 0 webcam için
